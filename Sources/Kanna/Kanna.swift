@@ -249,7 +249,7 @@ public protocol HTMLDocument: XMLDocument {
 XMLNodeSet
 */
 public final class XMLNodeSet {
-    fileprivate var nodes: [XMLElement] = []
+    private var nodes: [XMLElement] = []
     
     public var toHTML: String? {
         let html = nodes.reduce("") {
