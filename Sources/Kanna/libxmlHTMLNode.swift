@@ -59,7 +59,7 @@ internal final class libxmlHTMLNode: XMLElement {
     }
     
     public var toAttributedString: NSAttributedString? {
-        print("tag: \(self.tagName) - content: \(self.content)")
+        print("TO ATTRIBUTED == tag: \(self.tagName) - content: \(self.content)")
         return nil
     }
     
