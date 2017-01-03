@@ -223,6 +223,7 @@ XMLElement
 */
 public protocol XMLElement: SearchableNode {
     var parent: XMLElement? { get set }
+    var toAttributedString: NSAttributedString? { get }
     subscript(attr: String) -> String? { get set }
 
     func addPrevSibling(_ node: XMLElement)
@@ -249,7 +250,7 @@ public protocol HTMLDocument: XMLDocument {
 XMLNodeSet
 */
 public final class XMLNodeSet {
-    private var nodes: [XMLElement] = []
+    fileprivate var nodes: [XMLElement] = []
     
     public var toHTML: String? {
         let html = nodes.reduce("") {
