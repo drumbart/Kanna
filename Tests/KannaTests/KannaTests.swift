@@ -284,6 +284,37 @@ class KannaTests: XCTestCase {
             XCTAssert(doc.body!.toHTML == modifyNextHTML)
         }
     }
+    
+    func testToAttributedString() {
+        let filename = "test_basic_html"
+        guard let path = Bundle(for:KannaTests.self).path(forResource: filename, ofType:"html") else {
+            return
+        }
+        
+        do {
+            let html = try String(contentsOfFile: path, encoding: .utf8)
+            guard let doc = HTML(html: html, encoding: .utf8) else {
+                return
+            }
+            
+            if let body = doc.body {
+                let span = body.xpath("//span[@title='Test']").first
+                let spanContent = span?.content
+                XCTAssert(spanContent == "Test ")
+                
+                let str = span?.toAttributedString
+                XCTAssertNotNil(str, "Expected a NSAttributedString")
+                
+                // Need to fix to include NSURL attribute?
+                let anchor = body.at_css("a")
+                let anchorString = anchor?.toAttributedString
+                print(anchorString)
+            }
+            
+        } catch {
+            XCTAssert(false, "File not found. name: (\(filename)), error: \(error)")
+        }
+    }
 }
 
 extension KannaTests {

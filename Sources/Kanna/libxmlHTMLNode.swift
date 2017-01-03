@@ -23,6 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import Foundation
+import AppKit.NSAttributedString
 
 #if SWIFT_PACKAGE
 import SwiftClibxml2
@@ -58,8 +59,12 @@ internal final class libxmlHTMLNode: XMLElement {
         return html
     }
     
-    public var toAttributedString: NSAttributedString? {
-        print("TO ATTRIBUTED == tag: \(self.tagName) - content: \(self.content)")
+    var toAttributedString: NSAttributedString? {
+        guard let innerHtml = self.innerHTML, let htmlData = innerHtml.data(using: .utf8) else { return nil }
+        if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
+            return str
+        }
+        
         return nil
     }
     

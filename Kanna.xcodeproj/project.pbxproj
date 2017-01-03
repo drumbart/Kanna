@@ -21,6 +21,8 @@
 		1E7ADCA21DF5907F006E1815 /* test_HTML4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E7ADC9D1DF5907F006E1815 /* test_HTML4.html */; };
 		1E7ADCA31DF5907F006E1815 /* test_XML_ExcelWorkbook.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1E7ADC9E1DF5907F006E1815 /* test_XML_ExcelWorkbook.xml */; };
 		1E7ADCA41DF5907F006E1815 /* versions.xml in Resources */ = {isa = PBXBuildFile; fileRef = 1E7ADC9F1DF5907F006E1815 /* versions.xml */; };
+		BB8A6BAD1E1BF42B001EBC57 /* test_basic_html.html in Resources */ = {isa = PBXBuildFile; fileRef = BB8A6BAC1E1BF42B001EBC57 /* test_basic_html.html */; };
+		BBC082051E1BFD2E00FB9A68 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBC082041E1BFD2E00FB9A68 /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		1E7ADC9D1DF5907F006E1815 /* test_HTML4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_HTML4.html; sourceTree = "<group>"; };
 		1E7ADC9E1DF5907F006E1815 /* test_XML_ExcelWorkbook.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test_XML_ExcelWorkbook.xml; sourceTree = "<group>"; };
 		1E7ADC9F1DF5907F006E1815 /* versions.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = versions.xml; sourceTree = "<group>"; };
+		BB8A6BAC1E1BF42B001EBC57 /* test_basic_html.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_basic_html.html; sourceTree = "<group>"; };
+		BBC082041E1BFD2E00FB9A68 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC082051E1BFD2E00FB9A68 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,7 @@
 				1E7ADC5D1DF4F576006E1815 /* Tests */,
 				1E7ADC631DF4F7BC006E1815 /* Configurations */,
 				1E7ADC341DF4F3FC006E1815 /* Products */,
+				BBC082031E1BFD2E00FB9A68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7ADC9B1DF5907F006E1815 /* libraries.xml */,
+				BB8A6BAC1E1BF42B001EBC57 /* test_basic_html.html */,
 				1E7ADC9C1DF5907F006E1815 /* sample.html */,
 				1E7ADC9D1DF5907F006E1815 /* test_HTML4.html */,
 				1E7ADC9E1DF5907F006E1815 /* test_XML_ExcelWorkbook.xml */,
@@ -162,6 +169,14 @@
 			name = Data;
 			path = Tests/KannaTests/Data;
 			sourceTree = SOURCE_ROOT;
+		};
+		BBC082031E1BFD2E00FB9A68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBC082041E1BFD2E00FB9A68 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -268,6 +283,7 @@
 				1E7ADCA21DF5907F006E1815 /* test_HTML4.html in Resources */,
 				1E7ADCA11DF5907F006E1815 /* sample.html in Resources */,
 				1E7ADCA01DF5907F006E1815 /* libraries.xml in Resources */,
+				BB8A6BAD1E1BF42B001EBC57 /* test_basic_html.html in Resources */,
 				1E7ADCA41DF5907F006E1815 /* versions.xml in Resources */,
 				1E7ADCA31DF5907F006E1815 /* test_XML_ExcelWorkbook.xml in Resources */,
 			);

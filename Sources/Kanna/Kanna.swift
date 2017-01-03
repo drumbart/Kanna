@@ -272,6 +272,17 @@ public final class XMLNodeSet {
         return html.isEmpty == false ? html : nil
     }
     
+    public var toAttributedString: NSAttributedString? {
+        let str = NSMutableAttributedString(string: "")
+        for node in nodes {
+            if let nodeString = node.toAttributedString {
+                str.append(nodeString)
+            }
+        }
+        
+        return str.length > 0 ? str : nil
+    }
+    
     public var text: String? {
         let html = nodes.reduce("") {
             if let text = $1.text {
