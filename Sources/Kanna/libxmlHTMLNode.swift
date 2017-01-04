@@ -60,7 +60,7 @@ internal final class libxmlHTMLNode: XMLElement {
     }
     
     var toAttributedString: NSAttributedString? {
-        guard let innerHtml = self.innerHTML, let htmlData = innerHtml.data(using: .utf8) else { return nil }
+        guard let html = self.toHTML, let htmlData = html.data(using: .utf8) else { return nil }
         if let str = try? NSAttributedString.init(data: htmlData, options: [NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType], documentAttributes: nil) {
             return str
         }

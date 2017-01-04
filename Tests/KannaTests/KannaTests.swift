@@ -305,7 +305,6 @@ class KannaTests: XCTestCase {
                 let str = span?.toAttributedString
                 XCTAssertNotNil(str, "Expected a NSAttributedString")
                 
-                // Need to fix to include NSURL attribute?
                 let anchor = body.at_css("a")
                 let anchorString = anchor?.toAttributedString
                 print(anchorString)
